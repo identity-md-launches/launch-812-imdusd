@@ -1,0 +1,20 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "IMDUSD",
+    "name": "imdUsd",
+    "symbol": "IMDUSD",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "125270724187523965593206900"
+  },
+  "economics": {"poolBps":8800,"initialMarketCapWei":"2500000000000000000000","remainderTo":"0x6bf192ebef135e0f645e99d59d9bf44e7711606c"},
+  "notes": "IMDUSD in src/IMDUSD.sol is a fixed-supply ERC-20 named imdUsd with symbol IMDUSD and 18 decimals. Its argument-free constructor mints 1,000,000,000 tokens once to msg.sender. There are no application contracts or initialization calls. The pool uses the specified pair token and a 0.3% fee. initialPrice is provenance only: floor(sqrt(initialMarketCapWei / totalSupply) * 2^96), expressed with IMDUSD as currency0. The deployer derives the actual opening price from economics.initialMarketCapWei and token.totalSupply using the deployed currency ordering."
+}
